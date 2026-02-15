@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Traffic Light Simulator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .traffic-light {
+      width: 100px;
+      background: #333;
+      padding: 15px;
+      border-radius: 10px;
+      margin: 0 auto 20px;
+    }
+
+    .light {
+      width: 70px;
+      height: 70px;
+      background: #555;
+      border-radius: 50%;
+      margin: 10px auto;
+    }
+
+    .red.on {
+      background: red;
+    }
+
+    .yellow.on {
+      background: yellow;
+    }
+
+    .green.on {
+      background: green;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="traffic-light">
+    <div id="red" class="light red on"></div>
+    <div id="yellow" class="light yellow"></div>
+    <div id="green" class="light green"></div>
+  </div>
+
+  <button onclick="changeLight()">Change Light</button>
+
+  <script>
+    let currentLight = "red";
+
+    function changeLight() {
+      // Turn all lights off
+      document.getElementById("red").classList.remove("on");
+      document.getElementById("yellow").classList.remove("on");
+      document.getElementById("green").classList.remove("on");
+
+      // Decide next light
+      if (currentLight === "red") {
+        currentLight = "green";
+      } else if (currentLight === "green") {
+        currentLight = "yellow";
+      } else {
+        currentLight = "red";
+      }
+
+      // Turn the new light on
+      document.getElementById(currentLight).classList.add("on");
+    }
+  </script>
+
+</body>
+</html>

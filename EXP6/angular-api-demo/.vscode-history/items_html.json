@@ -1,0 +1,6 @@
+[
+  {
+    "timestamp": "2026-04-07T08:49:58.254Z",
+    "content": "<h2>Item List</h2>\n<ul>\n  <li *ngFor=\"let item of items\">\n    <strong>{{ item.title }}</strong>\n    <p>{{ item.body }}</p>\n  </li>\n</ul>"
+  }
+]

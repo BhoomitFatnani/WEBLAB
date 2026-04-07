@@ -1,0 +1,18 @@
+[
+  {
+    "timestamp": "2026-04-07T08:55:29.016Z",
+    "content": "import { bootstrapApplication } from '@angular/platform-browser';\r\nimport { appConfig } from './app/app.config';\r\nimport { AppC } from './app/app';\r\n\r\nbootstrapApplication(App, appConfig)\r\n  .catch((err) => console.error(err));\r\n"
+  },
+  {
+    "timestamp": "2026-04-07T08:55:30.803Z",
+    "content": "import { bootstrapApplication } from '@angular/platform-browser';\r\nimport { appConfig } from './app/app.config';\r\nimport { AppComponent } from './app/app';\r\n\r\nbootstrapApplication(App, appConfig)\r\n  .catch((err) => console.error(err));\r\n"
+  },
+  {
+    "timestamp": "2026-04-07T08:55:36.791Z",
+    "content": "import { bootstrapApplication } from '@angular/platform-browser';\r\nimport { appConfig } from './app/app.config';\r\nimport { AppComponent } from './app/app';\r\n\r\nbootstrapApplication(AppC, appConfig)\r\n  .catch((err) => console.error(err));\r\n"
+  },
+  {
+    "timestamp": "2026-04-07T08:55:37.986Z",
+    "content": "import { bootstrapApplication } from '@angular/platform-browser';\r\nimport { appConfig } from './app/app.config';\r\nimport { AppComponent } from './app/app';\r\n\r\nbootstrapApplication(AppComponent, appConfig)\r\n  .catch((err) => console.error(err));\r\n"
+  }
+]

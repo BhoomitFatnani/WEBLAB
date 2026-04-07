@@ -1,0 +1,6 @@
+[
+  {
+    "timestamp": "2026-04-07T08:45:08.443Z",
+    "content": "import { Injectable } from '@angular/core';\n\n@Injectable({ providedIn: 'root' })\nexport class ApiService {\n  private apiUrl = 'https://jsonplaceholder.typicode.com/posts'; // API URL\n\n  constructor() {}\n\n  async getItems(): Promise<any[]> {\n    const response = await fetch(this.apiUrl);\n    const data = await response.json();\n    return data;\n  }\n}   "
+  }
+]

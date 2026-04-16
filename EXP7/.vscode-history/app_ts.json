@@ -1,0 +1,14 @@
+[
+  {
+    "timestamp": "2026-04-16T18:54:07.591Z",
+    "content": "import { NgModule } from '@angular/core';\r\nimport { BrowserModule } from '@angular/platform-browser';\r\nimport { ReactiveFormsModule } from '@angular/forms'; // ✅ IMPORTANT\r\nimport { AppComponent } from './app.component';\r\n\r\n@NgModule({\r\n  declarations: [AppComponent],\r\n  imports: [BrowserModule, ReactiveFormsModule], // ✅ ADD HERE\r\n  providers: [],\r\n  bootstrap: [AppComponent],\r\n})\r\nexport class AppModule {}"
+  },
+  {
+    "timestamp": "2026-04-16T18:54:11.625Z",
+    "content": "import { Component, signal } from '@angular/core';\r\nimport { RouterOutlet } from '@angular/router';\r\n\r\n@Component({\r\n  selector: 'app-root',\r\n  imports: [RouterOutlet],\r\n  templateUrl: './app.html',\r\n  styleUrl: './app.css'\r\n})\r\nexport class App {\r\n  protected readonly title = signal('EXP7');\r\n}\r\n"
+  },
+  {
+    "timestamp": "2026-04-16T18:55:36.964Z",
+    "content": "import { Component } from '@angular/core';\r\nimport { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';\r\nimport { CommonModule } from '@angular/common';\r\n\r\n@Component({\r\n  selector: 'app-root',\r\n  standalone: true,\r\n  imports: [ReactiveFormsModule, CommonModule],\r\n  templateUrl: './app.html',\r\n  styleUrl: './app.css'\r\n})\r\nexport class App {\r\n\r\n  itemForm: FormGroup;\r\n  items: any[] = [];\r\n\r\n  constructor(private fb: FormBuilder) {\r\n    this.itemForm = this.fb.group({\r\n      title: ['', Validators.required],\r\n      description: ['', Validators.required],\r\n    });\r\n  }\r\n\r\n  addItem() {\r\n    if (this.itemForm.valid) {\r\n      this.items.push(this.itemForm.value);\r\n      this.itemForm.reset();\r\n    }\r\n  }\r\n}"
+  }
+]

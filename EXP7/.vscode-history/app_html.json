@@ -1,0 +1,6 @@
+[
+  {
+    "timestamp": "2026-04-16T18:55:46.462Z",
+    "content": "<h1>Add New Item</h1>\r\n\r\n<form [formGroup]=\"itemForm\" (ngSubmit)=\"addItem()\">\r\n\r\n  <label>Title:</label>\r\n  <input formControlName=\"title\">\r\n  <div *ngIf=\"itemForm.get('title')?.invalid && itemForm.get('title')?.touched\">\r\n    Title is required\r\n  </div>\r\n\r\n  <label>Description:</label>\r\n  <textarea formControlName=\"description\"></textarea>\r\n  <div *ngIf=\"itemForm.get('description')?.invalid && itemForm.get('description')?.touched\">\r\n    Description is required\r\n  </div>\r\n\r\n  <button type=\"submit\" [disabled]=\"itemForm.invalid\">\r\n    Add Item\r\n  </button>\r\n\r\n</form>\r\n\r\n<h2>Item List</h2>\r\n\r\n<ul>\r\n  <li *ngFor=\"let item of items\">\r\n    <b>{{item.title}}</b>\r\n    <p>{{item.description}}</p>\r\n  </li>\r\n</ul>"
+  }
+]

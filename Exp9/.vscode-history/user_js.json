@@ -1,0 +1,6 @@
+[
+  {
+    "timestamp": "2026-04-17T14:33:06.023Z",
+    "content": "const mongoose = require('mongoose');\r\n\r\nconst userSchema = new mongoose.Schema({\r\n  name: String,\r\n  email: String,\r\n  age: Number\r\n});\r\n\r\nmodule.exports = mongoose.model('User', userSchema);"
+  }
+]

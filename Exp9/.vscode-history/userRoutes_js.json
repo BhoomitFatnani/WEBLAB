@@ -1,0 +1,6 @@
+[
+  {
+    "timestamp": "2026-04-17T14:33:26.827Z",
+    "content": "const express = require('express');\r\nconst router = express.Router();\r\nconst User = require('../models/user');\r\n\r\n// CREATE\r\nrouter.post('/', async (req, res) => {\r\n  const user = new User(req.body);\r\n  const data = await user.save();\r\n  res.json(data);\r\n});\r\n\r\n// READ ALL\r\nrouter.get('/', async (req, res) => {\r\n  const data = await User.find();\r\n  res.json(data);\r\n});\r\n\r\n// READ ONE\r\nrouter.get('/:id', async (req, res) => {\r\n  const data = await User.findById(req.params.id);\r\n  res.json(data);\r\n});\r\n\r\n// UPDATE\r\nrouter.put('/:id', async (req, res) => {\r\n  const data = await User.findByIdAndUpdate(req.params.id, req.body, { new: true });\r\n  res.json(data);\r\n});\r\n\r\n// DELETE\r\nrouter.delete('/:id', async (req, res) => {\r\n  await User.findByIdAndDelete(req.params.id);\r\n  res.json({ message: \"Deleted successfully\" });\r\n});\r\n\r\nmodule.exports = router;"
+  }
+]
